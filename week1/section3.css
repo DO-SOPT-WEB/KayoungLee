@@ -1,0 +1,29 @@
+.SanDiegoImg,
+.SanDiegoImg2 {
+  display: flex;
+  justify-content: center;
+}
+.section3 {
+  display: flex;
+  margin: 6%;
+}
+
+.SanDiegoImg {
+  width: 100%;
+}
+
+.SanDiegoImg2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.SanDiegoImg img {
+  width: 300px;
+}
+
+.SanDiegoImg2 img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 3px;
+}

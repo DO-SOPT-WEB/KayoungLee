@@ -1,0 +1,12 @@
+.lasVegasImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5% 0 5% 0;
+}
+.lasVegasImg img {
+  width: 250px;
+  margin: 3px;
+  height: 250px;
+  object-fit: cover;
+}
