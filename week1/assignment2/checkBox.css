@@ -1,19 +1,14 @@
-.custom-label {
-  cursor: pointer;
-  border-radius: 5px;
-  width: 20%;
-  display: inline-block; /* 체크박스 영역을 보이게 함 */
+/* 심화 : 체크박스 커스텀 */
+label {
+  padding: 0 0.5rem;
+  border: 0.2rem solid #b1d3c5;
+  border-radius: 0.5rem;
 }
 
-.custom-label:hover {
-  background-color: rgb(30, 99, 76);
+input {
+  display: none; /* 체크박스 숨기기 */
 }
 
-.custom-label + input {
-  /* display: none; */
-}
-
-.custom-label + input:checked + .custom-label {
-  background-color: blue; /* 체크된 경우의 배경 색상 */
-  color: white;
+input:checked + label {
+  background-color: #b1d3c5;
 }
