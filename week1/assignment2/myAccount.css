@@ -1,0 +1,40 @@
+.myAccount {
+  width: 80%;
+  background-color: aquamarine;
+  border-radius: 25px;
+  border: 5px solid #000;
+  margin: 5% auto;
+  position: relative;
+  padding: 3%;
+  text-align: center;
+}
+
+.calc {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.positive {
+  margin-right: 20%;
+  color: blue;
+}
+.negative {
+  color: red;
+}
+.calc p {
+  display: flex;
+  align-items: center;
+}
+span {
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-weight: 600;
+  justify-content: center;
+  /* display: inline-flex; */
+  /* align-items: center; */
+  line-height: 15px;
+  margin-right: 10px;
+}
