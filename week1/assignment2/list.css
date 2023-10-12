@@ -4,9 +4,10 @@
   border-bottom: 1px solid #929292;
   justify-content: space-between;
 }
-.list-container {
-  height: 46vh;
-  overflow: scroll; /* 스크롤을 생성 */
+
+#list-container {
+  max-height: calc(100vh - 40vh); /* footer 높이를 제외한 나머지 높이로 설정 */
+  overflow: scroll;
 }
 
 .list {
