@@ -3,6 +3,10 @@
   padding: 3%;
   border-bottom: 1px solid #929292;
 }
+.list-container {
+  height: 46vh;
+  overflow: scroll; /* 스크롤을 생성함 */
+}
 
 .list {
   display: flex;
@@ -15,23 +19,38 @@
   height: 8vh;
   background-color: aquamarine;
 }
+/* 분류 */
 .list p:nth-child(1) {
   width: 20%;
   display: flex;
   justify-content: flex-start;
 }
+/* 가게명 */
 .list p:nth-child(2) {
   width: 50%;
   font-weight: 600;
   display: flex;
   justify-content: flex-start;
 }
+/* 지출금액 */
 .list p:nth-child(3) {
-  width: 40%;
+  width: 22%;
+  display: flex;
+  justify-content: flex-end;
+}
+/* 삭제버튼 */
+.list button {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  background: none;
+  border-style: none;
 }
 
-.list {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+.income p:nth-child(3) {
+  color: blue;
+}
+
+.expense p:nth-child(3) {
+  color: red;
 }
