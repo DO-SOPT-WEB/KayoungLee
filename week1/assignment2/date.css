@@ -1,0 +1,19 @@
+.prev-button,
+.next-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.date {
+  border-top: 1px solid #000;
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.date p {
+  margin: 0 5%;
+}
