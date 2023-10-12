@@ -6,7 +6,7 @@
 }
 .list-container {
   height: 46vh;
-  overflow: scroll; /* 스크롤을 생성함 */
+  overflow: scroll; /* 스크롤을 생성 */
 }
 
 .list {
@@ -20,6 +20,14 @@
   height: 8vh;
   background-color: aquamarine;
 }
+
+.list p {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 말줄임 적용*/
+}
+
 /* 분류 */
 .list p:nth-child(1) {
   width: 20%;
@@ -28,9 +36,7 @@
 }
 /* 가게명 */
 .list p:nth-child(2) {
-  width: 50%;
   font-weight: 600;
-  display: flex;
   justify-content: flex-start;
 }
 /* 지출금액 */
