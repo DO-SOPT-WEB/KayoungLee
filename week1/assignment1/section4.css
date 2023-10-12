@@ -8,35 +8,35 @@
     "e e e d"
     "e e e d";
   gap: 4px;
-  width: 1200px;
+  width: 88vw;
   margin: 0 auto;
   padding: 5%;
 }
 
 .item:nth-child(1) {
   grid-area: a;
-  width: 600px;
-  height: 200px;
+  width: 44vw;
+  height: 22vh;
 }
 .item:nth-child(2) {
   grid-area: b;
-  width: 600px;
-  height: 400px;
+  width: 44vw;
+  height: 44vh;
 }
 .item:nth-child(3) {
   grid-area: c;
-  width: 600px;
-  height: 200px;
+  width: 44vw;
+  height: 22vh;
 }
 .item:nth-child(4) {
   grid-area: d;
-  width: 300px;
-  height: 400px;
+  width: 22vw;
+  height: 44vh;
 }
 .item:nth-child(5) {
   grid-area: e;
-  width: 900px;
-  height: 400px;
+  width: 66vw;
+  height: 44vh;
 }
 
 .item {

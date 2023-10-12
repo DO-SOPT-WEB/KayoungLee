@@ -1,20 +1,26 @@
-.SanDiegoImg,
-.SanDiegoImg2 {
-  display: flex;
-  justify-content: center;
-}
 .section3 {
   display: flex;
-  margin: 6%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 5% 0;
+  gap: 10px;
 }
 
 .SanDiegoImg {
-  width: 100%;
+  display: flex;
+  /* 공간이 동등하게 분배 */
+  flex: 1;
 }
-
 .SanDiegoImg2 {
   display: flex;
+  /* 공간이 동등하게 분배 */
+  flex: 1;
+  /* 초기비율 */
+  flex-basis: 50%;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .SanDiegoImg2 img {
@@ -22,4 +28,12 @@
   height: 300px;
   object-fit: cover;
   margin: 3px;
+}
+
+.SanDiego img {
+  transition: transform 0.4s;
+}
+
+.SanDiego img:hover {
+  transform: translateY(-5px);
 }
