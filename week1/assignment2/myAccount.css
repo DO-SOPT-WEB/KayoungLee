@@ -25,7 +25,9 @@
 .calc p {
   display: flex;
   align-items: center;
+  font-size: 22px;
 }
+
 span {
   background-color: white;
   border-radius: 50%;
@@ -35,6 +37,33 @@ span {
   justify-content: center;
   /* display: inline-flex; */
   /* align-items: center; */
-  line-height: 15px;
+  line-height: 17px;
   margin-right: 10px;
+}
+
+@media (min-width: 500px) {
+  .myAccount h3 {
+    font-size: 25px;
+  }
+  .myAccount h1 {
+    font-size: 40px;
+  }
+  .calc p {
+    font-size: 30px; /* 780px 이상에서의 폰트 크기 */
+  }
+  .calc span {
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+  }
+  .date p {
+    font-size: 30px;
+  }
+  .top b,
+  .top label {
+    font-size: 25px;
+  }
+  #list-container p {
+    font-size: 25px;
+  }
 }

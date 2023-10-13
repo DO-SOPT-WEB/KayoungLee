@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
 header {
   background-color: aquamarine;
   text-align: center;
@@ -29,3 +33,5 @@ footer {
   border-radius: 15px;
   height: 100%;
 }
+
+/* 미디어쿼리를 사용하여 화면 너비가 600px 미만인 경우에만 폰트 변경 */
