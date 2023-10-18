@@ -1,0 +1,14 @@
+/* 심화 : 체크박스 커스텀 */
+label {
+  padding: 0 0.5rem;
+  border: 0.2rem solid #b1d3c5;
+  border-radius: 0.5rem;
+}
+
+input {
+  display: none; /* 체크박스 숨기기 */
+}
+
+input:checked + label {
+  background-color: #b1d3c5;
+}

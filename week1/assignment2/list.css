@@ -1,0 +1,70 @@
+.top {
+  display: flex;
+  padding: 3%;
+  border-bottom: 1px solid #929292;
+  justify-content: space-between;
+}
+
+#list-container {
+  max-height: calc(100vh - 54vh); /* footer 높이를 제외한 나머지 높이로 설정 */
+  overflow: scroll;
+}
+
+.list {
+  display: flex;
+  padding: 0 2%;
+  align-items: center;
+  position: relative;
+  margin: 2% auto;
+  width: 85%;
+  border-radius: 10px;
+  height: 8vh;
+  background-color: aquamarine;
+}
+
+.list p {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 말줄임 적용*/
+}
+
+/* 분류 */
+.list p:nth-child(1) {
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+}
+/* 가게명 */
+.list p:nth-child(2) {
+  font-weight: 600;
+  justify-content: flex-start;
+}
+/* 지출금액 */
+.list p:nth-child(3) {
+  width: 22%;
+  display: flex;
+  justify-content: flex-end;
+}
+/* 삭제버튼 */
+.list button {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  background: none;
+  border-style: none;
+}
+
+.income p:nth-child(3) {
+  color: blue;
+}
+
+.expense p:nth-child(3) {
+  color: red;
+}
+
+@media (min-height: 700px) {
+  #list-container {
+    max-height: calc(100vh - 46vh); /* 700px 이상에서의 높이 */
+  }
+}

@@ -1,0 +1,26 @@
+.LasVegas {
+  margin: 0 auto;
+}
+
+.lasVegasImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5%;
+}
+
+.lasVegasImg img {
+  width: 220px;
+  margin: 3px;
+  height: 220px;
+  flex-grow: 1;
+}
+
+/* 심화 과제 style */
+.LasVegas .lasVegasImg img {
+  transition: transform 0.4s;
+}
+
+.LasVegas .lasVegasImg img:hover {
+  transform: translateY(-5px);
+}
