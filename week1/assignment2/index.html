@@ -16,6 +16,7 @@
     </header>
     <section>
       <div class="myAccount">
+        <h1>나의 자산</h1>
         <h1 id="totalAmount">0</h1>
         <div class="calc">
           <p class="positive"><span>+</span> 0</p>
@@ -54,8 +55,46 @@
       </div>
     </section>
     <footer>
-      <button class="footerBtn">+</button>
+      <button class="footerBtn" onclick="openModal()">+</button>
     </footer>
+    <div id="modal" class="modal">
+      <div class="modalContent">
+        <h2>내역 추가</h2>
+        <div class="toggle">
+          <form>
+            <input
+              type="checkbox"
+              name="income"
+              value="income"
+              id="incomeAdd"
+              checked
+              onchange="handleCheckboxChange(this, 'expenseAdd')"
+            />
+            <label for="incomeAdd">수입</label>
+            <input
+              type="checkbox"
+              name="expense"
+              value="expense"
+              id="expenseAdd"
+              onchange="handleCheckboxChange(this, 'incomeAdd')"
+            />
+            <label for="expenseAdd">지출</label>
+          </form>
+        </div>
+
+        <h3>종류</h3>
+        <select id="category" placeholder="카테고리">
+          <option value="용돈">용돈</option>
+          <option value="비트코인">비트코인</option>
+        </select>
+        <h3>금액</h3>
+        <input type="number" id="amount" placeholder="금액" />
+        <h3>내용</h3>
+        <input type="text" id="description" placeholder="내용" />
+        <button id="saveBtn" onclick="saveEntry()">저장하기</button>
+        <button id="closebtn" onclick="closeModal()">닫기</button>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
