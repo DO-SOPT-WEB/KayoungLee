@@ -5,7 +5,8 @@ label {
   border-radius: 0.5rem;
 }
 
-input {
+.toggle input,
+.top input {
   display: none; /* 체크박스 숨기기 */
 }
 

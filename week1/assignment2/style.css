@@ -34,4 +34,47 @@ footer {
   height: 100%;
 }
 
-/* 미디어쿼리를 사용하여 화면 너비가 600px 미만인 경우에만 폰트 변경 */
+/* 모달 */
+.modal {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-color: rgb(37, 73, 109);
+  z-index: 1;
+}
+
+.modalContent {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10%;
+}
+.toggle {
+  display: flex;
+  justify-content: center;
+}
+.toggle label {
+  width: 100px;
+  display: flex;
+  margin: 3px;
+}
+.toggle form {
+  display: flex;
+}
+.modalContent h2 {
+  display: flex;
+  justify-content: center;
+}
+.modalContent h3 {
+  right: 0;
+  position: relative;
+}
+
+.modalContent input,
+.modalContent select {
+  width: 250px;
+  height: 30px;
+}
