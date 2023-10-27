@@ -43,6 +43,8 @@ footer {
   height: 500px;
   background-color: rgb(37, 73, 109);
   z-index: 1;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
 .modalContent {
