@@ -21,6 +21,28 @@
   transition: transform 0.4s;
 }
 
+.lasVegas_text p {
+  transition: transform 0.4s;
+}
+
 .LasVegas .lasVegasImg img:hover {
   transform: translateY(-5px);
+}
+
+.imgWithText {
+  position: relative;
+}
+.lasVegas_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s;
+  color: white;
+  opacity: 0;
+}
+
+.lasVegasImg .imgWithText:hover .lasVegas_text {
+  transform: translate(-50%, -70%);
+  opacity: 1;
 }

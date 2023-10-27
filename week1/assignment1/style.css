@@ -85,3 +85,13 @@ nav {
   color: yellow;
   text-decoration: underline;
 }
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #888;
+  border-radius: 50%;
+}
