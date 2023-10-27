@@ -32,8 +32,6 @@
 /* 분류 */
 .list p:nth-child(1) {
   width: 20%;
-  display: flex;
-  justify-content: flex-start;
 }
 /* 가게명 */
 .list p:nth-child(2) {
