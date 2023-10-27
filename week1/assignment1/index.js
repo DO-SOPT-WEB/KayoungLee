@@ -9,17 +9,10 @@ const images = lasVegasSection.querySelectorAll("img");
 images.forEach((image) => {
   image.addEventListener("mouseover", () => {
     image.style.filter = "brightness(50%)";
-    image.style.cursor = "pointer";
-    imageInfo.style.display = "block";
-    imageTitle.innerText = image.getAttribute("data-title");
-    imageDescription.innerText = image.getAttribute("data-description");
   });
 
   image.addEventListener("mouseout", () => {
     image.style.filter = "brightness(100%)";
-    imageInfo.style.display = "none";
-    imageTitle.innerText = "";
-    imageDescription.innerText = "";
   });
 });
 
@@ -30,7 +23,7 @@ imgWithText.forEach((item) => {
   item.addEventListener("mouseover", () => {
     const text = item.querySelector(".lasVegas_text");
     text.style.opacity = 1;
-    text.style.transform = "translate(-50%, -70%)";
+    text.style.transform = "translate(-50%, -60%)";
   });
 
   item.addEventListener("mouseout", () => {
