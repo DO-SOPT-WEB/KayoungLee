@@ -200,8 +200,6 @@ const saveEntry = () => {
   document.getElementById("amount").value = "";
   document.getElementById("description").value = "";
   document.getElementById("incomeAdd").checked = true;
-  document.getElementById("expenseAdd").checked = true;
-
   alert("저장 완료");
 };
 
