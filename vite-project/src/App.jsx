@@ -1,14 +1,22 @@
-import "./App.css";
-import Header from "../components/header";
-import MainPage from "../components/MainPage";
+import styled from "styled-components";
+import Header from "../components/Header";
+import MainWrapper from "../components/MainWrapper";
 
 function App() {
   return (
-    <>
+    <Wrapper>
       <Header />
-      <MainPage />
-    </>
+      <MainWrapper />
+    </Wrapper>
   );
 }
 
 export default App;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+`;

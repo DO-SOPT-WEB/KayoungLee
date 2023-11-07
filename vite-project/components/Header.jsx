@@ -1,11 +1,10 @@
-import React from "react"; // eslint-disable-line no-unused-vars
+import * as H from "../style/Header";
 
-const Header = () => {
-  return (
-    <header>
-      <h1>❤️이상형 월드컵❤️</h1>
-    </header>
-  );
-};
+const Header = () => (
+  <H.HeaderWrapper>
+    <h1>✨너의 이상형✨</h1>
+    {/* <button>처음으로</button> */}
+  </H.HeaderWrapper>
+);
 
 export default Header;
