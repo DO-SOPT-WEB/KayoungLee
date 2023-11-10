@@ -7,7 +7,7 @@ export const StartBtn = styled.button`
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #3c96f0;
+  background-color: red;
   border-radius: 5px;
 
   &:hover {
