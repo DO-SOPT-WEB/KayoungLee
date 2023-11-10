@@ -8,6 +8,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 3rem auto 0;
   gap: 6rem;
   background-color: #72bdff;
 `;
