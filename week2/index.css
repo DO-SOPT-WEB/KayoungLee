@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: beige;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  font-size: 20px;
+}
+
+.count {
+  cursor: pointer;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
