@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [buttonColor, setButtonColor] = useState("black");
 
   const [inputs, setInputs] = useState({
@@ -25,16 +26,45 @@ const Signup = () => {
       ...prevInputs,
       [e.target.name]: e.target.value,
     }));
+
+    if (
+      inputs.username === "" ||
+      inputs.password === "" ||
+      inputs.passwordCheck === "" ||
+      inputs.nickname === ""
+    ) {
+      setIsButtonDisabled(true);
+    } else {
+      setIsButtonDisabled(false);
+    }
   };
 
-  // const handleUsernameCheck = async () => {
-  //   try {
-  //     const exist = await checkUsernameAvailability(inputs.username);
-  //     setIsExist(!exist);
-  //   } catch (error) {
-  //     console.error("아이디 중복입니다:", error);
-  //   }
-  // };
+  const handleUsernameCheck = async () => {
+    try {
+      const exist = await checkUsernameAvailability(inputs.username);
+      setIsExist(!exist);
+      if (exist) {
+        setButtonColor("red");
+        setIsButtonDisabled(true);
+      } else {
+        setButtonColor("green");
+        if (
+          inputs.username === "" ||
+          inputs.password === "" ||
+          inputs.passwordCheck === "" ||
+          inputs.nickname === ""
+        ) {
+          setIsButtonDisabled(true);
+        } else {
+          setIsButtonDisabled(false);
+        }
+      }
+    } catch (error) {
+      console.error("아이디 중복입니다:", error);
+      setButtonColor("black");
+      setIsButtonDisabled(true);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,22 +87,6 @@ const Signup = () => {
       setError(error.response.data);
     }
   };
-
-  const handleUsernameCheck = async () => {
-    try {
-      const exist = await checkUsernameAvailability(inputs.username);
-      setIsExist(!exist);
-      if (exist) {
-        setButtonColor("red"); // if the username exists, set the button color to red
-      } else {
-        setButtonColor("green"); // if the username does not exist, set the button color to green
-      }
-    } catch (error) {
-      console.error("아이디 중복입니다:", error);
-      setButtonColor("black"); // if there is an error, set the button color back to black
-    }
-  };
-
   return (
     <SignupContainer>
       <FormContainer>
@@ -125,9 +139,14 @@ const Signup = () => {
           />
         </InputWrapper>
 
-        <SubmitButton type="button" onClick={handleSubmit}>
+        <SubmitButton
+          type="button"
+          onClick={handleSubmit}
+          disabled={isButtonDisabled}
+        >
           Signup
         </SubmitButton>
+
         {error && <ErrorMessage>{error}</ErrorMessage>}
         <LinksContainer>
           Do you have an account? <Link to="/login">login</Link>
@@ -166,7 +185,7 @@ const InputField = styled.input`
 const SubmitButton = styled.button`
   margin-bottom: 10px;
   padding: 8px;
-  background-color: #007bff;
+  background-color: ${(props) => (props.disabled ? "gray" : "blue")};
   color: #fff;
   border: none;
   cursor: pointer;
