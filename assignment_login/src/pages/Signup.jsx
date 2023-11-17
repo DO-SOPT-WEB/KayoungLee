@@ -6,6 +6,8 @@ import styled from "styled-components";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const [buttonColor, setButtonColor] = useState("black");
+
   const [inputs, setInputs] = useState({
     username: "",
     nickname: "",
@@ -25,14 +27,14 @@ const Signup = () => {
     }));
   };
 
-  const handleUsernameCheck = async () => {
-    try {
-      const exist = await checkUsernameAvailability(inputs.username);
-      setIsExist(!exist);
-    } catch (error) {
-      console.error("아이디 중복입니다:", error);
-    }
-  };
+  // const handleUsernameCheck = async () => {
+  //   try {
+  //     const exist = await checkUsernameAvailability(inputs.username);
+  //     setIsExist(!exist);
+  //   } catch (error) {
+  //     console.error("아이디 중복입니다:", error);
+  //   }
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,6 +57,22 @@ const Signup = () => {
       setError(error.response.data);
     }
   };
+
+  const handleUsernameCheck = async () => {
+    try {
+      const exist = await checkUsernameAvailability(inputs.username);
+      setIsExist(!exist);
+      if (exist) {
+        setButtonColor("red"); // if the username exists, set the button color to red
+      } else {
+        setButtonColor("green"); // if the username does not exist, set the button color to green
+      }
+    } catch (error) {
+      console.error("아이디 중복입니다:", error);
+      setButtonColor("black"); // if there is an error, set the button color back to black
+    }
+  };
+
   return (
     <SignupContainer>
       <FormContainer>
@@ -67,9 +85,13 @@ const Signup = () => {
             placeholder="아이디를 입력해주세요"
             onChange={handleChange}
           />
-          <button type="button" onClick={handleUsernameCheck}>
+          <Button
+            type="button"
+            onClick={handleUsernameCheck}
+            color={buttonColor}
+          >
             중복 체크
-          </button>
+          </Button>
           {!isExist && <ErrorMessage>아이디 중복입니다.</ErrorMessage>}
         </InputWrapper>
 
@@ -129,6 +151,11 @@ const FormContainer = styled.form`
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const Button = styled.button`
+  color: white;
+  background-color: ${(props) => props.color};
 `;
 
 const InputField = styled.input`
