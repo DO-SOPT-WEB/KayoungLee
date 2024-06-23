@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: aquamarine;
+  text-align: center;
+  padding: 3%;
+  border-bottom: 1px solid #000;
+}
+
+footer {
+  position: fixed;
+  background-color: #d8d8d8;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 8vh;
+}
+.footerBtn {
+  background: green;
+  border: none;
+  font-size: 40px;
+  width: 20%;
+  color: white;
+  border-radius: 15px;
+  height: 100%;
+}
+
+/* 모달 */
+.modal {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  height: 500px;
+  background-color: rgb(37, 73, 109);
+  z-index: 1;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.modalContent {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10%;
+}
+.toggle {
+  display: flex;
+  justify-content: center;
+}
+.toggle label {
+  width: 100px;
+  display: flex;
+  margin: 3px;
+}
+.toggle form {
+  display: flex;
+}
+.modalContent h2 {
+  display: flex;
+  justify-content: center;
+}
+.modalContent h3 {
+  right: 0;
+  position: relative;
+}
+
+.modalContent input,
+.modalContent select {
+  width: 250px;
+  height: 30px;
+}

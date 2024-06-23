@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration-line: none;
+  width: 150px;
+  text-align: center;
+}
+
+.up {
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9;
+}
+
+header {
+  background-color: navy;
+  color: white;
+  padding: 0.5% 5%;
+}
+
+.LasVegas header,
+.SanDiego header,
+.LosAngeles header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(135, 255, 255);
+  color: black;
+}
+.preview {
+  display: flex;
+  overflow-x: scroll;
+  padding: 2%;
+}
+
+.preview::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.preview::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.preview img {
+  max-width: 180px;
+  height: 280px;
+  object-fit: cover;
+  margin: 5px;
+}
+
+nav {
+  background-color: rgb(197, 197, 197);
+  padding: 5%;
+  margin: 1% 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.categories {
+  display: flex;
+  margin-bottom: 2%;
+  justify-content: center;
+  align-items: center;
+}
+.city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.city b {
+  margin-left: 1%;
+}
+
+.city b:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #888;
+  border-radius: 50%;
+}

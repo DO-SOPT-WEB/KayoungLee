@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="checkBox.css" />
+    <link rel="stylesheet" href="date.css" />
+    <link rel="stylesheet" href="myAccount.css" />
+    <link rel="stylesheet" href="list.css" />
+  </head>
+  <body>
+    <header>
+      <h1>가영이의 가계부</h1>
+    </header>
+    <div class="myAccount">
+      <h3>나의 자산</h3>
+      <h1>327000</h1>
+      <div class="calc">
+        <p class="positive"><span>+</span> 300000</p>
+        <p class="negative"><span>-</span> 27000</p>
+      </div>
+    </div>
+    <div class="date">
+      <button class="prev-button">&lt;</button>
+      <p>10월 1일</p>
+      <button class="next-button">&gt;</button>
+    </div>
+
+    <div class="top">
+      <b>내역 리스트</b>
+      <form>
+        <input
+          type="checkbox"
+          name="income"
+          value="income"
+          id="income"
+          checked
+        />
+        <label for="income">수입</label>
+        <input
+          type="checkbox"
+          name="expense"
+          value="expense"
+          id="expense"
+          checked
+        /><label for="expense">지출</label>
+      </form>
+    </div>
+
+    <div id="list-container">
+      <ul>
+        <li class="list expense">
+          <p>식비</p>
+          <p>버거킹 혜화역점</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list expense">
+          <p>취미</p>
+          <p>포토그레이강남 2호점</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list income">
+          <p>생명</p>
+          <p>만화 카페 월급</p>
+          <p>+60000</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list expense">
+          <p>쇼핑</p>
+          <p>오렌즈 강남역 지하쇼핑센터</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list expense">
+          <p>식비</p>
+          <p>버거킹 혜화역점</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list expense">
+          <p>식비</p>
+          <p>버거킹 혜화역점</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list expense">
+          <p>식비</p>
+          <p>버거킹 혜화역점</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list expense">
+          <p>식비</p>
+          <p>버거킹 혜화역점</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list expense">
+          <p>식비</p>
+          <p>버거킹 혜화역점</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list expense">
+          <p>식비</p>
+          <p>버거킹 혜화역점</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+        <li class="list expense">
+          <p>식비</p>
+          <p>버거킹 혜화역점</p>
+          <p>-10800</p>
+          <button type="button">X</button>
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      <button class="footerBtn">+</button>
+    </footer>
+  </body>
+</html>

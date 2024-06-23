@@ -1,0 +1,62 @@
+.LasVegas {
+  margin: 0 auto;
+}
+
+.lasVegasImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5%;
+}
+
+.lasVegasImg img {
+  width: 220px;
+  margin: 3px;
+  height: 220px;
+  flex-grow: 1;
+}
+
+/* 심화 과제 style */
+.LasVegas .lasVegasImg img {
+  transition: transform 0.4s;
+}
+
+.lasVegas_text p {
+  transition: transform 0.4s;
+}
+
+.LasVegas .lasVegasImg img:hover {
+  transform: translateY(-5px);
+}
+
+.imgWithText {
+  position: relative;
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.imgWithText img {
+  width: 220px;
+  height: 220px;
+  margin: 3px;
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  opacity: 0;
+  padding: 10px;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.text-container p {
+  padding-top: 10px;
+}
+
+.imgWithText:hover .text-container {
+  transform: translate(-50%, -60%);
+  opacity: 1;
+}
